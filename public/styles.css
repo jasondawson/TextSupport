@@ -1,18 +1,141 @@
-body, html {
-	height: 100%;
-	width: 100%;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** {
+	outline: 1px solid red;
+}*/
+
+/*main page styles*/
+
+.container {
+	width: 60%;
+	background: #96d6ed;
+	border: 1px solid #32afdc;
+	border-radius: 5px;
+	border-left: 20px solid #32afdc;
+	padding: 5px;
+	margin: 100px auto 0 auto;
+}
+
+.text-default {
+	font-size: 1.2em;
+	font-family: sans-serif;
+	margin: 10px;
+}
+
+.text-title {
+	font-size: 2em;
+	font-family: sans-serif;
+	margin: 20px;
+}
+
+.indent {
+	margin-left: 60px;
+}
+
+/*Message page styles*/
 
 .hidden {
 	display: none;
 }
 
+.red {
+	color: red;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.resource-container {
+	padding: 5px;
+	margin: 10px;
+}
+
+.pull-left {
+	display: inline;
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.col-md-3 {
+	border-radius: 5px;
+}
+
+/*404 page styles */
+
+.image-container {
+	height: 80%;
+	width: 80%;
+	margin: 50 auto 0 auto;
+}
+
 .not-found {
+	display: block;
 	padding: 20px;
-	height: 300px;
-	width: auto;
-	margin-top: 50px;
+	height: auto;
+	width: 400px;
+	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.center-text {
+	width: 400px;
+	margin: 10px auto 0 auto;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.text-h1 {
+	font-size: 2.4em;
+	font-weight: bold;
+	font-family: sans-serif;
 }

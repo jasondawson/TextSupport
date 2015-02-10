@@ -1,20 +1,24 @@
-<div class="message-container">
+<div class="resource-container">
+<p class="text-default">Helpful files </p>
+<button class="btn btn-default resource-link" ng-click="vm.getResource('FakeTermsandConditions.pdf')">Terms and Conditions</button>
+<button class="btn btn-default resource-link" ng-click="vm.getResource('FakeCeaseandDesist.pdf')">Cease and Desist</button>
+<button class="btn btn-default resource-link" ng-click="vm.getResource('helpful-infographic.jpg')">Helpful Infographic</button>
+<button class="btn btn-default resource-link" ng-click="vm.getResource('TheAnswerToTheUltimateQuestionOfLifeTheUniverseAndEverything.jpg')">The Answer</button>
+</div>
+<div class="container">
 <div ng-repeat="(key, val) in vm.numbers">
-{{key}} : 
+<p class="text-title">{{key}}<p> 
 
 <div ng-repeat="(key2, val2) in val">
-	{{val2.body}}
+	<p class="text-default pull-left indent" ng-show="val2.direction === 'outbound'">TS:</p>
+	<p class="text-default pull-left indent" ng-show="val2.direction === 'inbound'">me:</p>
+	<p class="text-default pull-left" ng-class="{true: 'red'}[val2.direction === 'outbound']">{{val2.body}}</p>
+	<br class="clear" />
 </div>
 <form ng-submit="vm.sendReply(key)">
-<input type="text" ng-model="vm.reply" placeholder="Reply to customer" />
+<input class="col-md-3 indent text-default" type="text" ng-model="vm.reply" placeholder="Reply to customer" />
 </form>
 </div>
 </div>
 
-<div class="resource-container">
-<button class="resource-link" ng-click="vm.getResource('FakeTermsandConditions.pdf')">Terms and Conditions</button>
-<button class="resource-link" ng-click="vm.getResource('FakeCeaseandDesist.pdf')">Cease and Desist</button>
-<button class="resource-link" ng-click="vm.getResource('helpful-infographic.jpg')">Helpful Infographic</button>
-<button class="resource-link" ng-click="vm.getResource('TheAnswerToTheUltimateQuestionOfLifeTheUniverseAndEverything.jpg')">The Answer</button>
-</div>
 <iframe id="iframe" class="hidden"></iframe>

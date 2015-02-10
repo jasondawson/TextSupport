@@ -42,7 +42,7 @@ twilio.sendMessage({
         });
 
         //respond to post request
-        console.log(req.body);
+      //  console.log(req.body);
         res.status(200).json(req.body);
 
     } else {
@@ -62,13 +62,11 @@ app.get('/api/support/resources/:resource_name', function(req, res) {
 		'helpful-infographic.jpg'
 		];
 	if (files.indexOf(file) !== -1) {
-		console.log('get ' + file);
-/*		res.attachment(file);
-		res.status(200).send(req.url).pipe(res);*/
-		res.attachment(file);
+		//console.log('get ' + file);
+
 		res.status(200).sendFile(file, {root: path.join(__dirname + '/public/')});
 	} else {
-		console.log('Looking for the answer');
+		//console.log('Looking for the answer');
 		res.status(200).sendFile(__dirname + '/public/404.html');
 	}
 });

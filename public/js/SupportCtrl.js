@@ -10,10 +10,10 @@ function SupportCtrl ($firebase, supportRef, mainService, $window) {
 	vm.reply = '';
 
 	vm.numbers = supportRef;
-	console.log(vm.numbers);
+	//console.log(vm.numbers);
 
 	vm.sendReply = function(to_num) {
-		console.log('send reply to ' + to_num);
+		//console.log('send reply to ' + to_num);
 		mainService.sendReply(to_num, vm.reply).then(function() {
 			vm.numbers = supportRef;
 			vm.reply = '';
@@ -21,12 +21,10 @@ function SupportCtrl ($firebase, supportRef, mainService, $window) {
 	}
 
 	vm.getResource = function(file) {
-		console.log('attempting GET ' + file)
+		//console.log('attempting GET ' + file)
 		mainService.getResource(file).then(function(res) {
 			console.log(res);
 			$window.open(res.config.url);
-	/*		 var iFrame = angular.element(document.querySelector('#iframe'));
-			iFrame.attr('src', res.data);*/
 		});
 	}
 
