@@ -1,0 +1,20 @@
+<div class="message-container">
+<div ng-repeat="(key, val) in vm.numbers">
+{{key}} : 
+
+<div ng-repeat="(key2, val2) in val">
+	{{val2.body}}
+</div>
+<form ng-submit="vm.sendReply(key)">
+<input type="text" ng-model="vm.reply" placeholder="Reply to customer" />
+</form>
+</div>
+</div>
+
+<div class="resource-container">
+<button class="resource-link" ng-click="vm.getResource('FakeTermsandConditions.pdf')">Terms and Conditions</button>
+<button class="resource-link" ng-click="vm.getResource('FakeCeaseandDesist.pdf')">Cease and Desist</button>
+<button class="resource-link" ng-click="vm.getResource('helpful-infographic.jpg')">Helpful Infographic</button>
+<button class="resource-link" ng-click="vm.getResource('TheAnswerToTheUltimateQuestionOfLifeTheUniverseAndEverything.jpg')">The Answer</button>
+</div>
+<iframe id="iframe" class="hidden"></iframe>

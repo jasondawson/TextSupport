@@ -1,0 +1,26 @@
+{
+  "name": "TextSupport",
+  "version": "1.0.0",
+  "description": "TextSupport\r ===========",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasondawson/TextSupport.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasondawson/TextSupport/issues"
+  },
+  "homepage": "https://github.com/jasondawson/TextSupport",
+  "dependencies": {
+    "body-parser": "^1.11.0",
+    "express": "^4.11.2",
+    "firebase": "^2.1.2",
+    "send": "^0.11.1",
+    "twilio": "^1.10.0"
+  }
+}
